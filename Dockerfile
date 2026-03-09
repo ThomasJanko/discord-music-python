@@ -11,7 +11,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY main.py .
+COPY main.py bot_core.py .
+COPY commands ./commands
 
 # Run as non-root
 RUN useradd -m -u 1000 bot && chown -R bot:bot /app
