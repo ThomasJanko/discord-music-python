@@ -91,7 +91,7 @@ class GuildQueue:
         self.current_song: Optional[Song] = None
         self.voice_client: Optional[discord.VoiceClient] = None
         self._idle_task: Optional[asyncio.Task] = None
-        self.volume: float = 1.0  # 0.0 to 1.0
+        self.volume: float = 0.20  # 0.0 to 1.0 (default 10%)
         self.current_volume_source: Optional[discord.PCMVolumeTransformer] = None
 
     def skip(self):
